@@ -26,14 +26,14 @@ Example Execution
 
 > make -f Makefile
 gcc -I -Wall pthread_race.c -o threadracer -lpthread
-> ./threadracer
-ThreadID: 140071363852032	inc: 1			<--- the first thread is called
-ThreadID: 140071355459328	inc: 2			<--- note all the ThreadIDs are different
-ThreadID: 140071347066624	inc: 3
-ThreadID: 140071338673920	inc: 4
-ThreadID: 140071330281216	inc: 5
-ThreadID: 140071321888512	inc: 6
-ThreadID: 140071313495808	inc: 7
-ThreadID: 140071305103104	inc: 8
-ThreadID: 140071296710400	inc: 9
-ThreadID: 140071288317696	inc: 10			<--- the final increment
+> ./threadracer
+This is Thread #1	inc: 1      <--- Increments the global variable by 1
+This is Thread #2	inc: 2
+This is Thread #3	inc: 3
+This is Thread #4	inc: 4
+This is Thread #6	inc: 5
+This is Thread #6	inc: 6
+This is Thread #7	inc: 7
+This is Thread #8	inc: 8
+This is Thread #9	inc: 9
+This is Thread #10	inc: 10      <--- Last increment to the global variable
